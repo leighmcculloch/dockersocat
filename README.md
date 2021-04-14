@@ -27,3 +27,7 @@ From within a container:
 ```
 DOCKER_HOST=host.docker.internal:2375 docker ps
 ```
+
+## Security Warning
+
+Use this at your own risk. The Docker for Mac release intentionally does not expose the Docker API on a TCP port for [security reasons](https://github.com/docker/for-mac/issues/770#issuecomment-252560286). Any application on your computer, including containers running within Docker for Mac, will be able to control Docker and therefore mount, access, and modify any folders that Docker can access, and do so as root. Other bad things could happen that aren't documented here.
